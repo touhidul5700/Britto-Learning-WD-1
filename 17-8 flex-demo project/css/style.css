@@ -2,7 +2,7 @@
 .first-row {
   display: flex;
   gap: 20px;
-  width: 60%;
+  width: 80%;
   margin: auto;
   height: 600px;
 }
