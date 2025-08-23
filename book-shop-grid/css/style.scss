@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+$primaryFont: "Titillium Web", sans-serif;
+$bodycolor: #f2fbea;
+$buttonColor: #23bcbc;
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: $primaryFont;
+}
+
+.home {
+  background-color: $bodycolor;
+
+  .header {
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px;
+    h1 {
+      font-size: 45px;
+      font-weight: 400;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      span,
+      button {
+        font-size: 25px;
+      }
+      button {
+        padding: 0px 20px;
+        background-color: $buttonColor;
+        border: 0;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px;
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      width: 50%;
+      .sub-title, .description {
+        font-size: 25px;
+        font-weight: 200;
+      }
+      .title {
+        font-size: 45px;
+        font-weight: 400;
+      }
+      .hero-cta{
+         padding: 0px 20px;
+         width: 200px;
+        background-color: $buttonColor;
+        border: 0;
+        border-radius: 5px;
+        font-size: 25px;
+      }
+    }
+    .image-container {
+      width: 50%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
