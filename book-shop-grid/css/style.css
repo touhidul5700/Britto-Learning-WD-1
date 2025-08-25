@@ -14,6 +14,7 @@ html {
 
 .home {
   background-color: #f2fbea;
+  /* Product Section Container */
 }
 .home .header {
   display: flex;
@@ -52,7 +53,8 @@ html {
   gap: 10px;
   width: 50%;
 }
-.home .hero-container .content-container .sub-title, .home .hero-container .content-container .description {
+.home .hero-container .content-container .sub-title,
+.home .hero-container .content-container .description {
   font-size: 25px;
   font-weight: 200;
 }
@@ -74,4 +76,148 @@ html {
 .home .hero-container .image-container img {
   width: 100%;
   height: auto;
-}/*# sourceMappingURL=style.css.map */
+}
+.home .product-section {
+  padding: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .product-section .product-heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home .product-section .product-heading h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.home .product-section .product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.home .product-section .product-grid .product {
+  border: 2px solid red;
+}
+.home .product-section .product-grid .product img {
+  width: 100%;
+  background-color: white;
+}
+.home .product-section .product-grid .product .product-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+.home .product-section .product-grid .product .product-content .productname {
+  font-size: 22px;
+  font-weight: 600;
+}
+.home .product-section .product-grid .product .product-content .product-tag {
+  background: black;
+  color: white;
+  padding: 2px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home .product-section .product-grid .product .product-content .download-btn {
+  background-color: #23bcbc;
+  padding: 10px 10px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.home .product-section .product-grid .product .product-content .download-btn:hover {
+  background-color: #38e4e4;
+}
+
+/* Mobile Responsive */
+/* 
+Maxwidth breakdowns-----------------
+
+Mobile Device- max-width:767px;
+Midium Device(Tablet)- max-width:991px;
+large Device(Desktop) - max-width: 1200px;
+
+Extra Large Device (ultra width monitor)- min-width:1201px
+
+---------------------------------
+
+*/
+@media (max-width: 767px) {
+  .home .header {
+    padding: 10px;
+  }
+  .home .header h1 {
+    font-size: 25px;
+  }
+  .home .header nav span,
+  .home .header nav button {
+    font-size: 18px;
+  }
+  .home .hero-container {
+    padding: 50px 10px;
+    flex-direction: column-reverse;
+  }
+  .home .hero-container .image-container {
+    width: 100%;
+  }
+  .home .hero-container .image-container img {
+    width: 100%;
+  }
+  .home .hero-container .content-container {
+    width: 100%;
+  }
+  .home .hero-container .content-container .sub-title {
+    font-size: 18px;
+  }
+  .home .hero-container .content-container .description {
+    font-size: 16px;
+  }
+  .home .hero-container .content-container .title {
+    font-size: 25px;
+  }
+  .home .hero-container .content-container button {
+    font-size: 18px !important;
+  }
+  .home .product-section {
+    padding: 50px 10px;
+  }
+  .home .product-section .download-btn {
+    padding: 5px !important;
+    font-size: 16px !important;
+  }
+  .home .product-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .home .product-heading h2 {
+    font-size: 25px !important;
+    font-weight: 600;
+  }
+}
+/* 
+
+UI/UX Designer- Graphical UI designer / Develpment UI Designer
+UI- User Interface
+----------------------Balance
+UX- User Experience
+
+Image Types
+
+JPG- large image with background high quality -memory space too mouch
+PNG- small images no transparent background- memory space minimal, usecase- sitelogo
+WEBP- short memory space - avarage quality
+SVG- illustrate image - no zoom effect- vector image
+
+
+
+
+
+
+
+
+
+*//*# sourceMappingURL=style.css.map */

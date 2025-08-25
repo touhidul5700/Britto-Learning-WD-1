@@ -50,11 +50,12 @@ html {
     align-items: center;
     padding: 75px;
     .content-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       width: 50%;
-      .sub-title, .description {
+      .sub-title,
+      .description {
         font-size: 25px;
         font-weight: 200;
       }
@@ -62,9 +63,9 @@ html {
         font-size: 45px;
         font-weight: 400;
       }
-      .hero-cta{
-         padding: 0px 20px;
-         width: 200px;
+      .hero-cta {
+        padding: 0px 20px;
+        width: 200px;
         background-color: $buttonColor;
         border: 0;
         border-radius: 5px;
@@ -79,4 +80,165 @@ html {
       }
     }
   }
+
+  /* Product Section Container */
+  .product-section {
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .product-heading {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      h2 {
+        font-size: 45px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+
+      .product {
+        border: 2px solid red;
+
+        img {
+          width: 100%;
+          background-color: white;
+        }
+        .product-content {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          gap: 20px;
+          .productname {
+            font-size: 22px;
+            font-weight: 600;
+          }
+          .product-tag {
+            background: black;
+            color: white;
+            padding: 2px 10px;
+            width: fit-content;
+          }
+          .download-btn {
+            background-color: $buttonColor;
+            padding: 10px 10px;
+            border: 0;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+          }
+          .download-btn:hover {
+            background-color: #38e4e4;
+          }
+        }
+      }
+    }
+  }
 }
+
+
+
+/* Mobile Responsive */
+
+/* 
+Maxwidth breakdowns-----------------
+
+Mobile Device- max-width:767px;
+Midium Device(Tablet)- max-width:991px;
+large Device(Desktop) - max-width: 1200px;
+
+Extra Large Device (ultra width monitor)- min-width:1201px
+
+---------------------------------
+
+*/
+@media (max-width: 767px) {
+  .home {
+    .header {
+      padding: 10px;
+      h1 {
+        font-size: 25px;
+      }
+      nav {
+        span,
+        button {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .hero-container {
+      padding: 50px 10px;
+      flex-direction: column-reverse;
+      .image-container {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .content-container {
+        width: 100%;
+        .sub-title{
+          font-size: 18px;
+        }
+        .description{
+          font-size: 16px;
+        }
+        .title{
+          font-size: 25px;
+        }
+        button{
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    .product-section {
+      padding: 50px 10px;
+      .download-btn {
+        padding: 5px !important;
+        font-size: 16px !important;
+      }
+    }
+    .product-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .product-heading {
+      h2 {
+        font-size: 25px !important;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* 
+
+UI/UX Designer- Graphical UI designer / Develpment UI Designer
+UI- User Interface
+----------------------Balance
+UX- User Experience
+ 
+Image Types
+
+JPG- large image with background high quality -memory space too mouch
+PNG- small images no transparent background- memory space minimal, usecase- sitelogo
+WEBP- short memory space - avarage quality
+SVG- illustrate image - no zoom effect- vector image
+
+
+
+
+
+
+
+
+
+*/
